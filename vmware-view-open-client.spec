@@ -1,12 +1,14 @@
 %define	rev	297975
 Name:		vmware-view-open-client
 Version:	4.5.0
-Release: 1
+Release:	2
 Summary:	VMware View Open Client lets you connect to remote Windows desktops managed by VMware View
 Group:		System/X11 
 License:	LGPL
 Url:		http://code.google.com/p/vmware-view-open-client/
 Source0:	http://vmware-view-open-client.googlecode.com/files/VMware-view-open-client-source-%{version}-%{rev}.tar.gz
+Requires:	rdesktop
+
 BuildRequires:	openssl-devel
 BuildRequires:	boost-devel
 BuildRequires:	libgtk+2.0-devel
