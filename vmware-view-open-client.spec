@@ -34,7 +34,7 @@ desktop to remote Windows desktops managed by VMware View.
 
 
 %build
-%configure2_5x
+%configure2_5x --with-boost-libdir=%{_libdir}
 
 %install
 %makeinstall_std
