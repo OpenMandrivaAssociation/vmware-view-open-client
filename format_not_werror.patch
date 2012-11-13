@@ -1,0 +1,38 @@
+diff --git a/lib/bora/log/log.c b/lib/bora/log/log.c
+index d03dcca..576840d 100644
+--- a/lib/bora/log/log.c
++++ b/lib/bora/log/log.c
+@@ -605,7 +605,7 @@ LogComputeFileName(LogState *log,       // IN: log state
+    char *fileName = NULL;
+ 
+    if (config != NULL) {
+-      fileName = Config_GetPathName(NULL, config);
++      fileName = Config_GetPathName(NULL, "%s", config);
+    }
+    if (fileName != NULL) {
+       *isTemp = FALSE;
+
+diff --git a/util.cc b/util.cc
+index 2d19ab2..d020749 100644
+--- a/util.cc
++++ b/util.cc
+@@ -522,7 +522,7 @@ UserWarning(const char *format, // IN
+    va_start(arguments, format);
+    string line = FormatV(format, arguments);
+    va_end(arguments);
+-   fprintf(stderr, line.c_str());
++   fprintf(stderr, "%s", line.c_str());
+    Log(line.c_str());
+ }
+
+diff --git a/util.cc b/util.cc
+index d020749..7cfa149 100644
+--- a/util.cc
++++ b/util.cc
+@@ -523,7 +523,7 @@ UserWarning(const char *format, // IN
+    string line = FormatV(format, arguments);
+    va_end(arguments);
+    fprintf(stderr, "%s", line.c_str());
+-   Log(line.c_str());
++   Log(line.c_str(), "%s");
+ }
