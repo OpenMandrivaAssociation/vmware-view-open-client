@@ -1,7 +1,7 @@
 %define	rev	297975
 Name:		vmware-view-open-client
 Version:	4.5.0
-Release:	2
+Release:	3
 Summary:	VMware View Open Client
 Group:		System/X11 
 License:	LGPLv3+
