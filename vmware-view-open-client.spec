@@ -5,7 +5,7 @@ Release:	3
 Summary:	VMware View Open Client
 Group:		System/X11 
 License:	LGPLv3+
-Url:		http://code.google.com/p/vmware-view-open-client/
+Url:		https://code.google.com/p/vmware-view-open-client/
 Source0:	http://vmware-view-open-client.googlecode.com/files/VMware-view-open-client-source-%{version}-%{rev}.tar.gz
 Requires:	rdesktop
 
